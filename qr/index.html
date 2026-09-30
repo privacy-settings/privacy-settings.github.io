@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Generator</title>
+    <!-- Core functional library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+    <h1>QR Code Generator</h1>
+    
+    <label for="text-input">Input:</label>
+    <input type="text" id="text-input" placeholder="https://example.com">
+    <button id="generate-btn">Generate</button>
+
+    <br><br>
+
+    
+    <div id="qrcode">QR Code here</div>
+
+    <script>
+        const textInput = document.getElementById('text-input');
+        const generateBtn = document.getElementById('generate-btn');
+        const qrContainer = document.getElementById('qrcode');
+
+        generateBtn.addEventListener('click', () => {
+            const inputValue = textInput.value.trim();
+
+            if (!inputValue) {
+                alert('Please enter text first.');
+                return;
+            }
+
+            // Clears placeholder text or old codes
+            qrContainer.innerHTML = '';
+
+            // Generates the new QR Code image
+            new QRCode(qrContainer, {
+                text: inputValue,
+                width: 200,
+                height: 200,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.M
+            });
+        });
+    </script>
+
+</body>
+</html>
