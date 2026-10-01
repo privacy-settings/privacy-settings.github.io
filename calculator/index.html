@@ -8,100 +8,63 @@
 </style></head> 
 <body> <h1>Simple Calculator</h1>
     
-    <label for="text-input">Input:</label>
-    <input type="text" id="text-input" placeholder="https://example.com">
-    <button id="generate-btn">Generate</button>
-
+    <!-- Calculator Display -->
+    <input type="text" id="display" readonly>
     <br><br>
-    
-    <div id="qrcode">QR Code here</div>
-    
-    <br>
-    
-    <!-- Action buttons (Hidden using a standard inline style until code is generated) -->
-    <div id="actions" style="display: none;">
-        <button id="download-btn">💾(Save)</button>
-        <button id="copy-btn">📋(Copy)</button>
-    </div>
 
+    <!-- Calculator Grid Layout using a Standard HTML Table -->
+    <table>
+        <tr>
+            <td><button onclick="clearDisplay()">C</button></td>
+            <td><button onclick="appendValue('/')">/</button></td>
+            <td><button onclick="appendValue('*')">*</button></td>
+            <td><button onclick="appendValue('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="appendValue('7')">7</button></td>
+            <td><button onclick="appendValue('8')">8</button></td>
+            <td><button onclick="appendValue('9')">9</button></td>
+            <td rowspan="2"><button onclick="appendValue('+')" style="height: 100%;">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="appendValue('4')">4</button></td>
+            <td><button onclick="appendValue('5')">5</button></td>
+            <td><button onclick="appendValue('6')">6</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="appendValue('1')">1</button></td>
+            <td><button onclick="appendValue('2')">2</button></td>
+            <td><button onclick="appendValue('3')">3</button></td>
+            <td rowspan="2"><button onclick="calculate()" style="height: 100%;">=</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button onclick="appendValue('0')" style="width: 100%;">0</button></td>
+            <td><button onclick="appendValue('.')">.</button></td>
+        </tr>
+    </table>
+
+    <!-- JavaScript Functionality -->
     <script>
-        const textInput = document.getElementById('text-input');
-        const generateBtn = document.getElementById('generate-btn');
-        const qrContainer = document.getElementById('qrcode');
-        const actionsDiv = document.getElementById('actions');
-        const downloadBtn = document.getElementById('download-btn');
-        const copyBtn = document.getElementById('copy-btn');
+        const display = document.getElementById('display');
 
-        generateBtn.addEventListener('click', () => {
-            const inputValue = textInput.value.trim();
+        function appendValue(val) {
+            display.value += val;
+        }
 
-            if (!inputValue) {
-                alert('Please enter text first.');
-                return;
-            }
+        function clearDisplay() {
+            display.value = '';
+        }
 
-            // Clears placeholder text or old codes
-            qrContainer.innerHTML = '';
-
-            // Generates the new QR Code image
-            new QRCode(qrContainer, {
-                text: inputValue,
-                width: 200,
-                height: 200,
-                colorDark: "#000000",
-                colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.M
-            });
-
-            // Reveal action buttons once the rendering completes
-            setTimeout(() => {
-                actionsDiv.style.display = 'block';
-            }, 100);
-        });
-
-        // --- DOWNLOAD FUNCTIONALITY ---
-        downloadBtn.addEventListener('click', () => {
-            const img = qrContainer.querySelector('img');
-            if (!img || !img.src) {
-                alert('Error processing image. Please try again.');
-                return;
-            }
-
-            const link = document.createElement('a');
-            link.href = img.src;
-            link.download = 'qrcode.png';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
-
-        // --- COPY FUNCTIONALITY ---
-        copyBtn.addEventListener('click', async () => {
-            const canvas = qrContainer.querySelector('canvas');
-            if (!canvas) {
-                alert('Error: trouble processing canvas element');
-                return;
-            }
-
+        function calculate() {
             try {
-                canvas.toBlob(async (blob) => {
-                    if (!blob) {
-                        alert('Error: Could not process image copy data.');
-                        return;
-                    }
-                    await navigator.clipboard.write([
-                        new ClipboardItem({ 'image/png': blob })
-                    ]);
-                    
-                    const originalText = copyBtn.innerText;
-                    copyBtn.innerText = 'Copied!';
-                    setTimeout(() => { copyBtn.innerText = originalText; }, 2000);
-                });
-            } catch (err) {
-                console.error(err);
-                alert('Browser blocked quick copying. Try right-clicking the image instead!');
+                // Evaluates the math string typed in the box safely
+                if (display.value) {
+                    display.value = Function('"use strict"; return (' + display.value + ')')();
+                }
+            } catch (error) {
+                display.value = 'Error';
             }
-        });
+        }
     </script>
  <a href="/index.html">Homepage</a></h3></body>
 </html>
