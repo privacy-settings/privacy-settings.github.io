@@ -13,22 +13,31 @@
       // 1. Get the current actual time
       const currentTime = new Date();
       
-      // 2. Subtract 36 seconds (36,000 milliseconds)
-      const delayedTime = new Date(currentTime.getTime() - 36000);
+      // 2. Get the delay value from the input box (default to 0 if empty)
+      const delayInSeconds = parseFloat(document.getElementById('delayInput').value) || 0;
+      const delayInMilliseconds = delayInSeconds * 1000;
       
-      // 3. Format the hours, minutes, and seconds to always show two digits
+      // 3. Subtract the user-defined delay
+      const delayedTime = new Date(currentTime.getTime() - delayInMilliseconds);
+      
+      // 4. Format the hours, minutes, and seconds
       const hours = String(delayedTime.getHours()).padStart(2, '0');
       const minutes = String(delayedTime.getMinutes()).padStart(2, '0');
       const seconds = String(delayedTime.getSeconds()).padStart(2, '0');
       
-      // 4. Update the text inside the HTML container
+      // 5. Update the text inside the HTML container
       document.getElementById('clock').textContent = hours + ':' + minutes + ':' + seconds;
     }, 1000);
   }
-</script> 
+</script>
+
 </head> <body onload="startClock()">
 
-  <!-- This unstyled element will hold the running clock time -->
+ <!-- Input field to adjust the delay dynamically -->
+  <label for="delayInput">Set delay (in seconds): </label>
+  <input type="number" id="delayInput" value="36" step="1">
+
+  <!-- The unstyled running clock display -->
   <div id="clock">00:00:00</div>
 
 </body></html>
