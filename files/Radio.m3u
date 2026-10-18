@@ -1,0 +1,106 @@
+#EXTM3U
+
+#EXTINF:-1 radio="true" group-title="Capital" tvg-logo="C:\Users\ryan\Documents\RadioLogos\Capital.jpg",Capital
+https://media-ssl.musicradio.com/CapitalGlasgow
+
+#EXTINF:-1 radio="true" group-title="Capital" tvg-logo="http://owdo.thisisglobal.com/2.0/id/230/logo/600x600.jpg",Capital UK
+https://media-ssl.musicradio.com/CapitalUK
+
+#EXTINF:-1 radio="true" group-title="Heart" tvg-logo="http://owdo.thisisglobal.com/2.0/id/210/logo/600x600.jpg",Heart
+https://media-ssl.musicradio.com/HeartGlasgow
+
+#EXTINF:-1 radio="true" group-title="Heart" tvg-logo="http://owdo.thisisglobal.com/2.0/id/229/logo/600x600.jpg",Heart UK
+https://media-ssl.musicradio.com/HeartUK
+
+#EXTINF:-1 radio="true" group-title="Capital" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1229/logo/600x600.jpg",Capital Anthems
+https://media-ssl.musicradio.com/CapitalAnthems
+
+#EXTINF:-1 radio="true" group-title="Capital" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1045/logo/600x600.jpg",Capital Dance
+https://media-ssl.musicradio.com/CapitalDance
+
+#EXTINF:-1 radio="true" group-title="Capital" tvg-logo="http://owdo.thisisglobal.com/2.0/id/204/logo/600x600.jpg",Capital XTRA
+https://media-ssl.musicradio.com/CapitalXTRANational
+
+#EXTINF:-1 radio="true" group-title="Capital" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1174/logo/600x600.jpg",Capital Chill
+https://media-ssl.musicradio.com/CapitalChill
+
+#EXTINF:-1 radio="true" group-title="Capital" tvg-logo="http://owdo.thisisglobal.com/2.0/id/331/logo/600x600.jpg",CapXTRA Reloaded
+https://media-ssl.musicradio.com/CapitalXTRAReloaded
+
+#EXTINF:-1 radio="true" group-title="Heart" tvg-logo="http://owdo.thisisglobal.com/2.0/id/333/logo/600x600.jpg",Heart 70s
+https://media-ssl.musicradio.com/Heart70s
+
+#EXTINF:-1 radio="true" group-title="Heart" tvg-logo="http://owdo.thisisglobal.com/2.0/id/274/logo/600x600.jpg",Heart 80s
+https://media-ssl.musicradio.com/Heart80s
+
+#EXTINF:-1 radio="true" group-title="Heart" tvg-logo="http://owdo.thisisglobal.com/2.0/id/332/logo/600x600.jpg",Heart 90s
+https://media-ssl.musicradio.com/Heart90s
+
+#EXTINF:-1 radio="true" group-title="Heart" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1147/logo/600x600.jpg",Heart 00s
+https://media-ssl.musicradio.com/Heart00s
+
+#EXTINF:-1 radio="true" group-title="Heart" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1233/logo/600x600.jpg",Heart 10s
+https://media-ssl.musicradio.com/Heart10s
+
+#EXTINF:-1 radio="true" group-title="Heart" tvg-logo="http://owdo.thisisglobal.com/2.0/id/327/logo/600x600.jpg",Heart Dance
+https://media-ssl.musicradio.com/HeartDance
+
+#EXTINF:-1 radio="true" group-title="Heart" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1235/logo/800x800.jpg",Heart Musicals
+https://media-ssl.musicradio.com/HeartMusicals
+
+#EXTINF:-1 radio="true" group-title="Heart" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1234/logo/600x600.jpg",Heart Love
+https://media-ssl.musicradio.com/HeartLove
+
+#EXTINF:-1 radio="true" group-title="Smooth" tvg-logo="http://owdo.thisisglobal.com/2.0/id/202/logo/600x600.jpg",Smooth Radio
+https://media-ssl.musicradio.com/SmoothUK
+
+#EXTINF:-1 radio="true" group-title="Smooth" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1208/logo/600x600.jpg",Smooth Relax
+https://media-ssl.musicradio.com/SmoothRelax
+
+#EXTINF:-1 radio="true" group-title="Smooth" tvg-logo="http://owdo.thisisglobal.com/2.0/id/335/logo/600x600.jpg",Smooth Chill
+https://media-ssl.musicradio.com/SmoothChill
+
+#EXTINF:-1 radio="true" group-title="Smooth" tvg-logo="http://owdo.thisisglobal.com/2.0/id/334/logo/600x600.jpg",Smooth Country
+https://media-ssl.musicradio.com/SmoothCountry
+
+#EXTINF:-1 radio="true" group-title="Smooth" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1240/logo/600x600.jpg",Smooth Soul
+https://media-ssl.musicradio.com/SmoothSoul
+
+#EXTINF:-1 radio="true" group-title="Smooth" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1238/logo/600x600.jpg",Smooth 70s
+https://media-ssl.musicradio.com/Smooth70s
+
+#EXTINF:-1 radio="true" group-title="Smooth" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1239/logo/600x600.jpg",Smooth 80s
+https://media-ssl.musicradio.com/Smooth80s
+
+#EXTINF:-1 radio="true" group-title="Radio X" tvg-logo="http://owdo.thisisglobal.com/2.0/id/232/logo/600x600.jpg",Radio X
+https://media-ssl.musicradio.com/RadioXUK
+
+#EXTINF:-1 radio="true" group-title="Radio X" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1231/logo/600x600.jpg",Radio X 90s
+https://media-ssl.musicradio.com/RadioX90s
+
+#EXTINF:-1 radio="true" group-title="Radio X" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1232/logo/600x600.jpg",Radio X 00s
+https://media-ssl.musicradio.com/RadioX00s
+
+#EXTINF:-1 radio="true" group-title="Radio X" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1230/logo/600x600.jpg",Radio X Chilled
+https://media-ssl.musicradio.com/RadioXChilled
+
+#EXTINF:-1 radio="true" group-title="Radio X" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1173/logo/600x600.jpg",RX ClassicRock
+https://media-ssl.musicradio.com/RadioXClassicRock
+
+#EXTINF:-1 radio="true" group-title="Gold Radio" tvg-logo="http://owdo.thisisglobal.com/2.0/id/90/logo/600x600.jpg",Gold Radio
+https://media-ssl.musicradio.com/Gold
+
+#EXTINF:-1 radio="true" group-title="Classic FM" tvg-logo="http://owdo.thisisglobal.com/2.0/id/43/logo/600x600.jpg",Classic FM
+https://media-ssl.musicradio.com/ClassicFM
+
+#EXTINF:-1 radio="true" group-title="Classic FM" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1237/logo/600x600.jpg",Classic Movies
+https://media-ssl.musicradio.com/ClassicFMMovies
+
+#EXTINF:-1 radio="true" group-title="Classic FM" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1236/logo/600x600.jpg",Classic Calm
+https://media-ssl.musicradio.com/ClassicFMCalm
+
+#EXTINF:-1 radio="true" group-title="LBC" tvg-logo="http://owdo.thisisglobal.com/2.0/id/206/logo/600x600.jpg",LBC
+https://media-ssl.musicradio.com/LBCUK
+
+#EXTINF:-1 radio="true" group-title="LBC" tvg-logo="http://owdo.thisisglobal.com/2.0/id/1007/logo/600x600.jpg",LBC News
+https://media-ssl.musicradio.com/LBCNewsUK
