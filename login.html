@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign in with Google</title>
+  
+  <script src="https://accounts.google.com/gsi/client" async></script>
+</head>
+<body>
+  <h2>Welcome</h2>
+
+  <!-- 2. Configure the One Tap Pop-up & Callback -->
+  <div id="g_id_onload"
+       data-client_id="256132658341-ib9n2o8ahflnp8odr2hm8ekq6uim89vt.apps.googleusercontent.com"
+       data-callback="handleCredentialResponse"
+       data-auto_prompt="true">
+  </div>
+
+  <!-- 3. Render the Sign in with Google Button -->
+  <div class="g_id_signin"
+       data-type="standard"
+       data-size="large"
+       data-theme="outline"
+       data-text="sign_in_with"
+       data-shape="rectangular">
+  </div>
+
+  <p id="status"></p>
+
+<script>
+  function handleCredentialResponse(response) {
+    // 1. Decode the Google token
+    const payload = JSON.parse(atob(response.credential.split('.')[1]));
+
+    // 2. Save user info in the browser
+    localStorage.setItem('google_user', JSON.stringify(payload));
+    displayUser(payload);
+  }
+
+  function displayUser(user) {
+    document.getElementById('status').innerHTML = `
+      Signed in as <strong>${user.name}</strong> (${user.email})
+      <button onclick="signOut()">Sign Out</button>
+    `;
+  }
+
+  function signOut() {
+    localStorage.removeItem('google_user');
+    location.reload();
+  }
+
+  // 3. Automatically restore login on page refresh
+  const savedUser = localStorage.getItem('google_user');
+  if (savedUser) {
+    displayUser(JSON.parse(savedUser));
+  }
+</script>
+
+</body>
+</html>
