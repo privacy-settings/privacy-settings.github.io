@@ -17,7 +17,8 @@
   </div>
 
   <!-- 3. Render the Sign in with Google Button -->
-  <div class="g_id_signin"
+ <div id="login-box">
+    <div class="g_id_signin"
        data-type="standard"
        data-size="large"
        data-theme="outline"
@@ -29,32 +30,36 @@
 
 <script>
   function handleCredentialResponse(response) {
-    // 1. Decode the Google token
     const payload = JSON.parse(atob(response.credential.split('.')[1]));
-
-    // 2. Save user info in the browser
     localStorage.setItem('google_user', JSON.stringify(payload));
     displayUser(payload);
   }
 
   function displayUser(user) {
+    // Hide the Sign in with Google button
+    document.getElementById('login-box').style.display = 'none';
+
+    // Show user name and Sign Out button
     document.getElementById('status').innerHTML = `
-      Signed in as <strong>${user.name}</strong> (${user.email})
+      Signed in as <strong>${user.name}</strong>
       <button onclick="signOut()">Sign Out</button>
     `;
   }
 
   function signOut() {
     localStorage.removeItem('google_user');
-    location.reload();
+    if (window.google) {
+      google.accounts.id.disableAutoSelect();
+    }
+    location.reload(); // Clears the user status and brings back the Sign In button
   }
 
-  // 3. Automatically restore login on page refresh
   const savedUser = localStorage.getItem('google_user');
   if (savedUser) {
     displayUser(JSON.parse(savedUser));
   }
 </script>
+
     <h1>Welcome to JARS Tools!
 </h1> <h3>List of tools</h3>
 <a href="/qr">QR Code Generator</a> 
@@ -62,5 +67,6 @@
 <a href="/calculator">Simple Calculator</a>
 <br></br>
 <a href="/clock">Clock</a>
+
 
 
